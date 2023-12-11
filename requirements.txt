@@ -1,0 +1,8 @@
+python-dotenv
+Requests
+websockets
+ccxt
+pandas
+ccxt
+matplotlib
+numpy
