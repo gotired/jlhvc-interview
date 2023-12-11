@@ -2,6 +2,7 @@ from .config import *
 import json
 import time
 import requests
+import sys
 
 
 if __name__ == "__main__":
@@ -16,7 +17,7 @@ if __name__ == "__main__":
     rate = sys.argv[3]
     order_type = sys.argv[4]
 
-    reqBody = {"sym": "thb_btc", "amt": amount, "rat": rate, "typ": oreder_type}
+    reqBody = {"sym": "thb_btc", "amt": amount, "rat": rate, "typ": order_type}
     payload = [ts, "POST", Config["path"]["sell"], json.dumps(reqBody)]
 
     sig = gen_sign(Config["api_secret"], "".join(payload))

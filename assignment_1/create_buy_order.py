@@ -17,7 +17,7 @@ if __name__ == "__main__":
     rate = sys.argv[3]
     order_type = sys.argv[4]
 
-    reqBody = {"sym": symbol, "amt": int(amount), "rat": int(rate), "typ": oreder_type}
+    reqBody = {"sym": symbol, "amt": int(amount), "rat": int(rate), "typ": order_type}
     payload = [ts, "POST", Config["path"]["buy"], json.dumps(reqBody)]
 
     sig = gen_sign(Config["api_secret"], "".join(payload))
